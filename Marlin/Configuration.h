@@ -20,8 +20,8 @@
  *
  */
 #pragma once
-//#error "Don't build with import-2.1.x configurations!"
-//#error "Use the 'bugfix...' or 'release...' configurations matching your Marlin version."
+
+#define CONFIG_EXAMPLES_DIR "Creality/Ender-4"
 
 /**
  * Configuration.h
@@ -62,8 +62,8 @@
 
 // @section info
 
-// Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(Jobily, Creality Ender-4, Skorpi, brandstaetter, xymopen)" // Who made the changes.
+// Author info of this build printed to the host during boot and M115. Based on config from: Creality Ender-4, Skorpi, brandstaetter, xymopen
+#define STRING_CONFIG_H_AUTHOR "(lylloff73, Metal Extruder)" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 // @section machine
@@ -685,8 +685,6 @@
                                   // Set/get with G-code: M301 E[extruder number, 0-2]
 
   // Ender-4
-  // M301 E0 P29.82 I3.06 D72.56 ;Set Nozzle PID
-
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
